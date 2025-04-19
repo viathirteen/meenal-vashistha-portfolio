@@ -2,82 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>via.thirteen — Meenal Vashistha</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meenal Vashistha – Designer & Visual Storyteller</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header" id="stickyHeader">
-    <div><strong>via.thirteen</strong></div>
-    <nav>
-      <a href="#heart">Heart</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+  <header class="site-header">
+    <div class="container header-grid">
+      <h1 class="logo">Meenal Vashistha</h1>
+      <nav>
+        <a href="#heart">Heart</a>
+        <a href="#skills">Skills</a>
+        <a href="Resume 01.pdf" target="_blank">Resume</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="section" id="hero">
-      <h1>Think Extra. Think Bold.</h1>
-      <p>A visual communicator blending story, style, and strategy into bold, evocative expressions for screens and print.</p>
-      <a class="btn" href="mailto:meenalvashistha95@gmail.com">Start a project →</a>
-    </section>
+  <section class="hero">
+    <div class="container">
+      <h2 class="subtitle">Designer & Visual Storyteller</h2>
+      <p class="location">(India)</p>
+    </div>
+  </section>
 
-    <section class="section" id="heart">
-      <div class="heart">
-        <h2>From the Heart</h2>
-        <p>I believe in making work that <span class="highlighted">stays</span> — work that feels, provokes, and engages beyond the scroll. Inspired by culture, design systems, movement, and typography.</p>
+  <section id="heart" class="heart">
+    <div class="container">
+      <h2>What Drives Me</h2>
+      <p>I believe in design that breathes — intuitive, bold, and human. Every frame, font, and feeling is a chance to communicate with clarity and intent. I design to move people, not just pixels.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Selected Work & Skills</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Brand Identity</h3>
+          <a href="https://www.instagram.com/p/C3ywtL-hWyh/" target="_blank">View Project →</a>
+        </div>
+        <div class="card">
+          <h3>Editorial Design</h3>
+          <a href="https://www.instagram.com/p/C3-fLo9hD2b/" target="_blank">View Layout →</a>
+        </div>
+        <div class="card">
+          <h3>Motion & Reels</h3>
+          <a href="https://www.instagram.com/reel/C45t8XNBHnG/" target="_blank">Watch Reel →</a>
+        </div>
+        <div class="card">
+          <h3>Art Direction</h3>
+          <a href="https://www.instagram.com/p/C45rsIHBXhP/" target="_blank">Explore Aesthetic →</a>
+        </div>
+        <div class="card">
+          <h3>Content Strategy</h3>
+          <a href="https://www.instagram.com/p/C3geFzihWGo/" target="_blank">Read More →</a>
+        </div>
+        <div class="card">
+          <h3>Soft Girlie Marketing</h3>
+          <a href="https://www.instagram.com/p/C4L2bo-B23M/" target="_blank">See Campaign →</a>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="skills">
-      <h2>Selected Work</h2>
-      <ul>
-        <li><a href="https://www.instagram.com/via.thirteen/" target="_blank">Instagram — Reels & Carousel Design</a></li>
-        <li><a href="https://viathirteen.github.io/" target="_blank">GitHub Site — Interactive Portfolio</a></li>
-        <li><a href="https://www.linkedin.com/in/meenalvashistha/" target="_blank">LinkedIn — Professional Work & Case Studies</a></li>
-        <li><a href="https://medium.com/@copywritermeenal" target="_blank">Medium — Articles on Tech, Culture, and Design</a></li>
-      </ul>
-    </section>
-
-    <section class="section" id="contact">
-      <h2>Let's Work Together</h2>
-      <p>Available for freelance, brand collaborations, and visual storytelling commissions.</p>
-      <p><a href="mailto:meenalvashistha95@gmail.com">meenalvashistha95@gmail.com</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <div>&copy; 2025 via.thirteen</div>
-    <div>
-      <a href="https://instagram.com/via.thirteen">Instagram</a> |
-      <a href="https://www.linkedin.com/in/meenalvashistha/">LinkedIn</a>
+  <footer class="footer">
+    <div class="container">
+      <p>Contact: <a href="mailto:meenalvashistha95@gmail.com">meenalvashistha95@gmail.com</a></p>
+      <p>
+        <a href="https://www.instagram.com/via.thirteen/" target="_blank">Instagram</a> /
+        <a href="https://www.linkedin.com/in/meenalvashistha/" target="_blank">LinkedIn</a>
+      </p>
     </div>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.section').forEach(section => {
-      observer.observe(section);
-    });
-
-    // Floating header effect
-    const header = document.getElementById('stickyHeader');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
-        header.classList.add('floating');
-      } else {
-        header.classList.remove('floating');
-      }
-    });
-  </script>
 </body>
 </html>
